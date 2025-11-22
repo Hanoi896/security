@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 정보</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="my-info-container">
+        <h1>내 정보</h1>
+        <p><strong>아이디:</strong> <span id="userID"></span></p>
+        <button id="deleteAccountButton" onclick="confirmDeleteAccount()">계정 삭제</button>
+        <button id="backButton" onclick="goBack()">돌아가기</button>
+    </div>
+
+    <script>
+        // 유저 ID를 표시
+        document.addEventListener('DOMContentLoaded', function () {
+            const userID = localStorage.getItem('currentUser');
+            document.getElementById('userID').innerText = userID ? userID : '로그인 정보 없음';
+        });
+
+        // 계정 삭제 확인 및 처리
+        function confirmDeleteAccount() {
+            const confirmDelete = confirm('정말로 계정을 삭제하시겠습니까?');
+            if (confirmDelete) {
+                alert('계정이 삭제되었습니다.');
+                localStorage.removeItem('currentUser');
+                location.href = 'home.html'; // 메인 페이지로 이동
+            }
+        }
+
+        // 돌아가기 버튼
+        function goBack() {
+            location.href = 'home.html'; // 메인 페이지로 이동
+        }
+    </script>
+</body>
+</html>

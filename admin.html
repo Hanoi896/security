@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 페이지</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1>관리자 페이지</h1>
+        <div class="admin-dashboard">
+            <div class="dashboard-card">
+                <h2>사용자 관리</h2>
+                <p>전체 사용자 목록을 관리하고 추가하거나 삭제할 수 있습니다.</p>
+                <button onclick="manageUsers()">사용자 관리</button>
+            </div>
+            <div class="dashboard-card">
+                <h2>사이트 설정</h2>
+                <p>사이트의 기본 설정을 변경할 수 있습니다.</p>
+                <button onclick="siteSettings()">설정 관리</button>
+            </div>
+        </div>
+
+        <!-- 사용자 관리 화면 -->
+        <div id="userManagement" style="display:none;">
+            <h2>사용자 목록</h2>
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>아이디</th>
+                        <th>비밀번호</th>
+                        <th>삭제</th>
+                    </tr>
+                </thead>
+                <tbody id="userList"></tbody>
+            </table>
+            <button onclick="addUser()">사용자 추가</button>
+            <button onclick="goBack()">뒤로가기</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

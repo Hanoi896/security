@@ -1,0 +1,265 @@
+body {
+ font-family: Arial, sans-serif;
+ background-color: #000;
+ color: #fff;
+ margin: 0;
+ padding: 0;
+}
+
+/* 앱 컨테이너 */
+.app-container {
+ position: relative;
+ padding: 20px;
+}
+
+/* 로그인 아이콘 */
+.icon img {
+ filter: invert(100%);
+ width: 40px;
+ height: 40px;
+ cursor: pointer;
+ position: fixed;
+ top: 20px;
+ right: 20px;
+ border-radius: 50%;
+ border: 2px solid #444;
+ background-color: #222;
+ transition: background 0.3s, border-color 0.3s;
+}
+
+.icon img:hover {
+ background-color: #444;
+ border-color: #666;
+}
+
+/* 드롭다운 메뉴 */
+.dropdown-menu {
+ display: none;
+ position: absolute;
+ top: 60px;
+ right: 20px;
+ background: #111;
+ border: 1px solid #333;
+ border-radius: 5px;
+ padding: 10px;
+ box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+ z-index: 1000;
+}
+
+.dropdown-menu button {
+ display: block;
+ width: 100%;
+ margin: 5px 0;
+ padding: 10px;
+ background: #222;
+ color: #fff;
+ border: none;
+ cursor: pointer;
+ border-radius: 5px;
+ text-align: left;
+ transition: background 0.3s;
+}
+
+.dropdown-menu button:hover {
+ background: #444;
+}
+
+/* 모달 */
+.modal {
+ display: none;
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background: #111;
+ padding: 20px;
+ border-radius: 5px;
+ box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+ z-index: 1001;
+ color: #fff;
+ width: 300px;
+ text-align: center;
+}
+
+.modal-content input {
+ width: calc(100% - 20px);
+ margin: 10px 0;
+ padding: 10px;
+ background: #222;
+ color: #fff;
+ border: 1px solid #333;
+ border-radius: 5px;
+}
+
+.modal-content button {
+ width: 100%;
+ padding: 10px;
+ margin-top: 10px;
+ background: #444;
+ color: #fff;
+ border: none;
+ cursor: pointer;
+ border-radius: 5px;
+ transition: background 0.3s;
+}
+
+.modal-content button:hover {
+ background: #666;
+}
+
+.close {
+ position: absolute;
+ top: 10px;
+ right: 10px;
+ font-size: 20px;
+ cursor: pointer;
+ color: #fff;
+}
+
+/* 환영 메시지 */
+#welcomeMessage {
+ margin-top: 100px;
+ text-align: center;
+ font-size: 24px;
+ color: #fff;
+}
+
+/* 내 정보 화면 스타일 */
+.screen {
+ display: none;
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background: #111;
+ padding: 20px;
+ border-radius: 5px;
+ box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+ z-index: 1001;
+ width: 300px;
+ text-align: center;
+ color: #fff;
+}
+
+.screen .back-icon {
+ position: absolute;
+ top: 10px;
+ left: 10px;
+ font-size: 20px;
+ cursor: pointer;
+ color: #fff;
+}
+
+/* 버튼 기본 스타일 */
+button {
+ font-family: inherit;
+ font-size: 16px;
+}
+
+body {
+ font-family: Arial, sans-serif;
+ background-color: #222;
+ color: #fff;
+ margin: 0;
+ padding: 0;
+}
+
+/* 관리자 페이지 컨테이너 */
+.admin-container {
+ padding: 20px;
+ text-align: center;
+}
+
+h1 {
+ font-size: 36px;
+ margin-bottom: 40px;
+}
+
+.admin-dashboard {
+ display: flex;
+ justify-content: space-around;
+ margin-bottom: 50px;
+}
+
+/* 대시보드 카드 스타일 */
+.dashboard-card {
+ background: #333;
+ padding: 20px;
+ border-radius: 10px;
+ width: 250px;
+ box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+ text-align: center;
+}
+
+.dashboard-card h2 {
+ font-size: 24px;
+ margin-bottom: 10px;
+}
+
+.dashboard-card p {
+ font-size: 16px;
+ margin-bottom: 20px;
+}
+
+.dashboard-card button {
+ padding: 10px 20px;
+ background-color: #444;
+ color: #fff;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ transition: background 0.3s;
+}
+
+.dashboard-card button:hover {
+ background-color: #666;
+}
+
+/* 사용자 목록 테이블 */
+#userTable {
+ width: 80%;
+ margin: 20px auto;
+ border-collapse: collapse;
+}
+
+#userTable th, #userTable td {
+ padding: 10px;
+ border: 1px solid #ddd;
+}
+
+#userTable th {
+ background-color: #444;
+}
+
+#userTable tr:nth-child(even) {
+ background-color: #333;
+}
+
+#userTable button {
+ padding: 5px 10px;
+ background-color: #e74c3c;
+ color: white;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+}
+
+#userTable button:hover {
+ background-color: #c0392b;
+}
+
+/* 뒤로가기 버튼 */
+.back-btn {
+ padding: 10px 20px;
+ background-color: #444;
+ color: #fff;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ font-size: 16px;
+ transition: background 0.3s;
+}
+
+.back-btn:hover {
+ background-color: #666;
+}

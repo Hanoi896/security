@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 페이지</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 로그인 아이콘 -->
+        <div class="icon" id="profileIcon" onclick="toggleDropdownMenu()">
+            <img src="회원.jpg" alt="회원 아이콘">
+        </div>
+
+        <!-- 드롭다운 메뉴 -->
+        <div id="dropdownMenu" class="dropdown-menu">
+            <button id="loginButton" onclick="openLogin()">로그인</button>
+            <button id="registerButton" onclick="openRegister()">회원가입</button>
+            <button id="myInfoButton" style="display: none;" onclick="goToMyInfo()">내 정보</button>
+            <button id="logoutButton" style="display: none;" onclick="logout()">로그아웃</button>
+        </div>
+
+        <!-- 로그인 모달 -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModals()">×</span>
+                <h2>로그인</h2>
+                <input id="loginID" type="text" placeholder="ID" required>
+                <input id="loginPassword" type="password" placeholder="Password" required>
+                <button onclick="login()">로그인</button>
+                <p id="registerLink">계정이 없나요? <a href="/register" onclick="openRegister()">회원가입</a></p>
+            </div>
+        </div>
+
+        <!-- 회원가입 모달 -->
+        <div id="registerModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModals()">×</span>
+                <h2>회원가입</h2>
+                <span class="back-icon" onclick="closeRegister()">←</span>
+                <input id="registerID" type="text" placeholder="아이디" required>
+                <input id="registerPassword" type="password" placeholder="비밀번호" required>
+                <input id="registerPasswordConfirm" type="password" placeholder="비밀번호 확인" required>
+                <button id="registerButton" onclick="register()">가입하기</button>
+            </div>
+        </div>
+
+        <!-- 내 정보 화면 -->
+        <div id="myInfoScreen" class="screen">
+            <span class="back-icon" onclick="returnToMain()">←</span>
+            <h2>내 정보</h2>
+            <button onclick="deleteAccount()">계정 삭제</button>
+        </div>
+
+        <!-- 환영 메시지 -->
+        <div id="welcomeMessage">환영합니다!</div>
+    </div>
+        <script src="script.js"></script>
+</body>
+</html>
